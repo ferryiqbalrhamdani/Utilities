@@ -1,0 +1,71 @@
+.wrapper {
+    position: relative;
+}
+.wrapper :is(.btn, .link) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #151515;
+    border-radius: 50%;
+}
+.btn {
+    position: absolute;
+    margin-left: 90px;
+    margin-top: 50px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: outline .25;
+}
+.active .btn,
+.btn:hover {
+    outline: 5px solid #bb93fc;
+    outline-offset: -4px;
+}
+.item {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 50px;
+    list-style: none;
+    transition: transform .5s;
+    transition-delay: var(--d);
+}
+.wrapper.active .sc:nth-child(1) {
+    transform: translateX(-50px);
+}
+.wrapper.active .sc:nth-child(2) {
+    transform: translateY(50px);
+}
+.wrapper.active .sc:nth-child(3) {
+    transform: translateX(50px);
+}
+.wrapper.active .ig:nth-child(1) {
+    transform: translateX(50px);
+}
+.wrapper.active .ig:nth-child(2) {
+    transform: translateY(-50px);
+}
+.wrapper.active .ig:nth-child(3) {
+    transform: translateX(-50px);
+}
+.wrapper.active .tw:nth-child(1) {
+    transform: translateX(-100px);
+}
+.wrapper.active .tw:nth-child(2) {
+    transform: translateY(100px);
+}
+.wrapper.active .tw:nth-child(3) {
+    transform: translateX(100px);
+}
+.wrapper.active .gh:nth-child(1) {
+    transform: translateX(100px);
+}
+.wrapper.active .gh:nth-child(2) {
+    transform: translateY(100px);
+}
+.wrapper.active .gh:nth-child(3) {
+    transform: translateX(100px);
+}
